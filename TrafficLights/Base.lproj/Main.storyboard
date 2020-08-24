@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhJ-Ws-I2f">
+                                <rect key="frame" x="110" y="52" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NhJ-Ws-I2f" secondAttribute="height" multiplier="1:1" id="raa-fi-RT4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLW-gc-r9Q">
+                                <rect key="frame" x="110" y="182" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eLW-gc-r9Q" secondAttribute="height" multiplier="1:1" id="HLC-st-1uf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWf-h2-hjc">
+                                <rect key="frame" x="110" y="313" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gWf-h2-hjc" secondAttribute="height" multiplier="1:1" id="bh3-gX-jx6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g86-E3-ey4">
+                                <rect key="frame" x="115.5" y="500" width="89" height="48"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="waW-h1-YSp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="gWf-h2-hjc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1gc-EB-bSC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g86-E3-ey4" secondAttribute="bottom" constant="20" id="2Lf-cr-fny"/>
+                            <constraint firstItem="eLW-gc-r9Q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:142" id="5rn-61-5td"/>
+                            <constraint firstItem="NhJ-Ws-I2f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="69M-i8-V9Z"/>
+                            <constraint firstItem="eLW-gc-r9Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="V2V-zX-ZkE"/>
+                            <constraint firstItem="gWf-h2-hjc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:142" id="XpA-m6-471"/>
+                            <constraint firstItem="NhJ-Ws-I2f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ezl-Nk-Ev1"/>
+                            <constraint firstItem="NhJ-Ws-I2f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:142" id="hwW-H1-2kB"/>
+                            <constraint firstItem="gWf-h2-hjc" firstAttribute="top" secondItem="eLW-gc-r9Q" secondAttribute="bottom" constant="31" id="n6Q-zp-jFs"/>
+                            <constraint firstItem="eLW-gc-r9Q" firstAttribute="top" secondItem="NhJ-Ws-I2f" secondAttribute="bottom" constant="30" id="nFq-yb-f5p"/>
+                            <constraint firstItem="g86-E3-ey4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pXm-IR-aTk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="gWf-h2-hjc" id="ArH-Bc-sVJ"/>
+                        <outlet property="redLightView" destination="NhJ-Ws-I2f" id="WCu-pr-Dbj"/>
+                        <outlet property="startButton" destination="g86-E3-ey4" id="375-CG-5nh"/>
+                        <outlet property="yellowLightView" destination="eLW-gc-r9Q" id="BRc-cQ-xHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>
